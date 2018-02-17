@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jugador : MonoBehaviour
+public class Jugador2 : MonoBehaviour
 {
 
     public List<GameObject> personaje;
@@ -56,4 +56,3 @@ public class Jugador : MonoBehaviour
 
     }
 }
-
