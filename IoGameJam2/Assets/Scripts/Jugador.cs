@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Jugador : MonoBehaviour {
 
-    public List<GameObject>
+
     void Start () {
 		
 	}
