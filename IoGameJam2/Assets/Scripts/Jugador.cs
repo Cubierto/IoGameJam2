@@ -7,17 +7,29 @@ public class Jugador : MonoBehaviour
 
     public List<GameObject> personaje;
     GameObject gancho;
+<<<<<<< HEAD
 
     public float playerSpeed = 4.0f;
+=======
+    
+    public float playerSpeed = 4f;
+>>>>>>> c88667629a31dd92a24626ee08f60054e730a5a0
 
     void Start()
     {
 
     }
-    void FixedUpdate()
+    void Update()
     {
         Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         GetComponent<Rigidbody2D>().velocity = targetVelocity * playerSpeed;
+
+        Vector2 moveDirection = GetComponent<Rigidbody2D>().velocity;
+        if (moveDirection != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
 
         Debug.Log(personaje.Count);
 
