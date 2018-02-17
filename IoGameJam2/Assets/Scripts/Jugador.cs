@@ -8,7 +8,7 @@ public class Jugador : MonoBehaviour
     public List<GameObject> personaje;
     GameObject gancho;
 
-    public float playerSpeed = 4f;
+    public float playerSpeed = 4.0f;
 
     void Start()
     {
